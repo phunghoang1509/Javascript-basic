@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setter & Getter Js</title>
+</head>
+
+<body>
+    <h1>Setter & Getter Js</h1>
+    <div id="root"></div>
+    <script>
+        class Circle {
+            constructor(radius) {
+                this._radius = radius; // Lưu trữ bán kính trong một thuộc tính dưới dạng _radius để tránh việc lặp vô hạn.
+            }
+
+            // Getter để lấy giá trị bán kính
+            get radius() {
+                return this._radius;
+            }
+
+            // Setter để gán giá trị bán kính và kiểm tra tính hợp lệ
+            set radius(newRadius) {
+                if (newRadius <= 0) {
+                    throw new Error('Radius must be positive');
+                }
+                this._radius = newRadius;
+            }
+
+            // Getter để lấy diện tích của hình tròn
+            get area() {
+                return Math.PI * this._radius ** 2;
+            }
+        }
+
+        // Tạo một đối tượng Circle
+        let circle = new Circle(5);
+
+        // Sử dụng getter và setter
+        console.log(circle.radius); // Kết quả: 5
+        console.log(circle.area);   // Kết quả: 78.53981633974483
+
+        circle.radius = 10; // Gán giá trị bán kính mới
+        console.log(circle.radius); // Kết quả: 10
+        console.log(circle.area);   // Kết quả: 314.1592653589793
+
+        circle.radius = -5; // Gọi setter với giá trị không hợp lệ, sẽ ném ra một Error
+
+    </script>
+</body>
+
+</html>

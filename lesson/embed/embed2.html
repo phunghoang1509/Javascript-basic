@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let my_str = "Hoàng Minh Phụng Vip";
+        let result = my_str.split('Vip');
+        // console.log(result);
+
+        let my_array = ['p', 'l', 'n', 'k', 'a'];
+
+        let num_array = [1, 2, 2, 3, 3, 33, 66, 7, 4];
+
+        let arr = function (num_array) {
+            let count = 0;
+            let new_arr = []
+            for (let i = 0; i < num_array.length; i++) {
+                if (num_array[i] !== num_array[i + 1]) {
+                    new_arr.push(num_array[i])
+                }
+            }
+            return new_arr.sort((a, b) => a - b);
+
+        }
+        console.log(arr(num_array));
+
+
+
+        // for (let i = 0; i < num_array.length; i++) {
+        //     // console.log(i);
+        // }
+
+        // let new_arr = [...num_array];
+        // for (let i = 0; i < new_arr.length; i++) {
+        //     for (let j = i + 1; j < new_arr.length; j++) {
+        //         if (new_arr[i] < new_arr[j]) {
+        //             let temp = new_arr[i];
+        //             new_arr[i] = new_arr[j];
+        //             new_arr[j] = temp;
+        //         }
+        //     }
+        // }
+        // console.log(new_arr);
+
+
+        // let result = num_array.join('');
+        // console.log(result);
+
+        // let result = num_array.sort((a, b) => a - b)
+        // console.log(result);
+        // let new_arr = num_array.filter(x => x % 2 == 0)
+
+        // console.log(new_arr);
+
+
+    </script>
+</body>
+
+</html>

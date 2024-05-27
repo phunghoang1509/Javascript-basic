@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practice</title>
+</head>
+
+<body>
+    <h1>Event form</h1>
+    <form action="" id="formSubmit">
+        <fieldset>
+            <legend>Register Form</legend>
+            <label for="fullname">fullName</label>
+            <br>
+            <input type="text" id="fullname" autocomplete="off">
+            <br>
+            <!-- -- -->
+            <label for="username">userName</label>
+            <br>
+            <input type="text" id="username" autocomplete="off">
+            <br>
+            <!-- -- -->
+            <label for="password">Password</label>
+            <br>
+            <input type="password" id="password" autocomplete="off">
+            <br>
+            <label for="city">City</label>
+            <br>
+            <select name="" id="city">
+                <option value="">Chọn</option>
+                <option value="1">Hà Nội</option>
+                <option value="2">Đà Nẵng </option>
+                <option value="3">Hồ Chí Minh</option>
+            </select>
+            <br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <div id="result"></div>
+    <script>
+        const fullNameElement = document.getElementById('fullname')
+        const userNameElement = document.getElementById('username')
+        const passWordElement = document.getElementById('password')
+        const cityElement = document.getElementById('city')
+        const formSubmit = document.getElementById('formSubmit')
+        formSubmit.addEventListener('submit', function (e) {
+            e.preventDefault()
+            const fullname = fullNameElement.value;
+            const name = userNameElement.value;
+            const password = passWordElement.value;
+            const ciTy = cityElement.value;
+
+            const result = document.getElementById('result')
+            function showcity(ciTy) {
+                let city_name = []
+                city_name[1] = 'Hà Nội'
+                city_name[2] = 'Đà Nẵng'
+                city_name[3] = 'Hồ Chí Minh'
+                return city_name[ciTy]
+            }
+            result.innerHTML = ` 
+                Fullname: ${fullname} </br>
+                Username: ${name} </br>
+                password: ${password} </br>
+                City: ${showcity(ciTy)} </br>
+            `
+
+        })
+
+    </script>
+</body>
+
+</html>

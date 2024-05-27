@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Tạo div
+        //-#wrapper
+        //-.text-center
+        //-gomuno
+        const body = document.body;
+        const h1 = document.createElement('h1');
+        h1.innerText = "Đây là thẻ H1"
+        body.appendChild(h1)
+        const divElement = document.createElement('div')
+        divElement.id = "wrapper"
+        divElement.className = "text-center"
+        divElement.innerHTML = "Gomu no"
+        body.appendChild(divElement)
+        const p = document.createElement('p')
+        p.innerHTML = "super gomu no"
+        const ul = document.createElement('ul')
+        const li1 = document.createElement('li')
+        li1.className = "current"
+        li1.innerHTML = "gomu 1"
+        const li2 = document.createElement('li')
+        li2.innerHTML = "gomu 2"
+        divElement.appendChild(p)
+        divElement.appendChild(ul)
+        // ul.appendChild(li1)
+        // ul.appendChild(li2)
+        //Thêm nhiều phần tử 
+        ul.append(li1, li2)
+        //Thêm phần tử vào trước phần tử con đầu tiên của phần tử cha
+        const li3 = document.createElement('li')
+        li3.textContent = "gomu 3"
+        ul.prepend(li3)
+        //Chèn 1 phần tử vào 1 phần tử con xác định
+        const li4 = document.createElement('li')
+        li4.innerText = "gomu 4"
+        const current = document.querySelector('li.current')
+        ul.insertBefore(li4, current)
+        //Chèn 1 phần tử vào sau 1 phần tử con xác định
+        const nextNode = document.createElement('li')
+        nextNode.innerHTML = "gomu 5"
+        function insertAfter(newNode, nextNode) {
+            nextNode.parentNode.insertBefore(newNode, nextNode.nextSibling)
+        }
+        insertAfter(nextNode, current)
+        //Chèn 1 phần tử vào trước và sau 1 phần tử xác định
+        const li5 = document.createElement('li')
+        li5.innerHTML = "gomu 6"
+        li5.style.color = 'red'
+        current.before(li5)
+        current.after(li5)
+        //Xoá 1 phần tử ra khỏi DOM
+        current.remove()
+        // ul.removeChild(li2)
+        //Thay thế phần tử trên DOM
+        ul.replaceChild(li5, li3)
+        //Nhân bản phần tử trên DOM
+        const cloneUl = ul.cloneNode(true)
+        const Copy = document.getElementById('wrapper')
+        Copy.appendChild(cloneUl)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Event Js</title>
+</head>
+
+<body>
+    <h1>Load Envent Js</h1>
+    <img src="https://inkythuatso.com/uploads/thumbnails/800/2023/03/1-hinh-anh-ngay-moi-hanh-phuc-sieu-cute-inkythuatso-09-13-35-50.jpg"
+        style="max-width: 100%;" alt="">
+    <script>
+        //Kích hoạt khi nội dung được load xong
+        //1.loadtrang
+        // window.addEventListener('load', () => {
+        //     alert('loaded!')
+        // })
+        //2.Load hình ảnh
+        const imgAlert = document.querySelector('img')
+        imgAlert.addEventListener('load', () => {
+            alert('gomuno')
+        })
+    </script>
+</body>
+
+</html>

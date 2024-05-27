@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+
+<body>
+    <h1>Xin chào arrow function</h1>
+    <script>
+        //Cách thông thường
+        // function hello() {
+        //     return "Xin chào gomu!";
+        // }
+        // console.log(hello());
+        // let hello = function () {
+        //     return "Xin chào gomu!";
+        // }
+        // console.log(hello());
+        //Sử dụng arrow function
+        // let hello = () => {
+        //     return "super gomu!"
+        // }
+        // let hello = name => `xin chào ${name}`
+        const result = document.querySelector('h1')
+        result.addEventListener('click', () => {
+            alert('gomu')
+        })
+        console.log(hello("Phụng"));
+    </script>
+</body>
+
+</html>

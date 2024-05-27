@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let list_number = [[1, 3, 4, 3, 553, 33, 22, 44, 2, 6, 77, 9], [2, 4, 22, 44]];
+        let arr1 = [4, 5, 6, 3, 2, 34, 3, 43, 53]
+        let arr2 = [3, 45, 67, 8, 10]
+
+        let min = arr1[0];
+        for (let i = 1; i < arr1.length; i++) {
+            if (arr1[i] < min) {
+                min = arr1[i]
+            }
+        }
+        console.log(min);
+
+        // arr1.forEach((e) => {
+        //     console.log(e);
+        // })
+
+        // let found = arr1.find(x => x > 30)
+        // console.log("found", found);
+
+        // let new_arrr = [...list_number[0], ...list_number[1]]
+        // console.log(new_arrr);
+
+        let new_arr = list_number.map(x => x.filter(x => x % 2 == 0))
+
+        // console.log(new_arr);
+
+        let list_user = [
+            {
+                name: "phụng",
+                age: "22",
+                nums: "22"
+            }
+        ]
+        // list_number[0].splice(3, 2);
+        // console.log(list_number);
+
+
+
+
+        let result = list_number.concat(list_user);
+        // console.log(list_number[0].indexOf(553));
+        // document.write(result);
+        // let list_event = [];
+        // for(let value of list_number){
+        //     if(value %2 != 0){
+        //         list_event.push(value)
+        //     }
+
+        // }
+        // document.write(list_event[0][3]);
+    </script>
+
+</html>

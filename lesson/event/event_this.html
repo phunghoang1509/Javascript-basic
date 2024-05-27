@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This event element</title>
+</head>
+
+<body>
+    <h1>Đây là thẻ H1</h1>
+    <script>
+        const h1Element = document.querySelector('h1')
+        h1Element.addEventListener('click', function () {
+            this.innerText = 'Gomu no';
+            this.parentNode.style.background = 'red'
+            console.log(h1Element.innerText);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var s = 'VII';
+        const result = s.split('');
+        const set_gia_tri = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        };
+        let sum = 0;
+        console.log(set_gia_tri);
+        console.log(result);
+        for (let i = s.length - 1; i >= 0; i--) {
+            let so_hien_tai = set_gia_tri[s[i]];
+            let so_truoc_do = set_gia_tri[s[i - 1]]
+            if (so_truoc_do < so_hien_tai) {
+                sum += so_hien_tai - so_truoc_do;
+                i--;
+            } else {
+                sum += so_hien_tai;
+            }
+        }
+        return sum;
+
+        console.log(sum);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

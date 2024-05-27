@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương thức làm việc thuộc tính trên DOM </title>
+</head>
+
+<body>
+    <a href="" title="Demo Title" count="998">gomu no</a>
+    <div id="result"></div>
+    <script>
+        const aElement = document.querySelector('a')
+
+        // getAttribute();//Lấy giá trị thuộc tính
+        console.log(aElement.getAttribute('count'));
+        // setAttribute();//Thiết lập
+        aElement.setAttribute('count', 2001)
+        console.log(aElement.getAttribute('count'));
+        //Tạo thuộc tính mới author
+        aElement.setAttribute('author', "Hoàng Minh Phụng")
+        console.log(aElement.getAttribute('author'));
+
+        // hasAttribute();//Kiểm tra thuộc tính ở trên phần tử
+        console.log(aElement.hasAttribute('author'));
+        if (aElement.hasAttribute('author')) {
+            document.getElementById('result').innerText = `${aElement.getAttribute('author')}`
+        }
+        // removeAttribute();//Xoá một thuộc tính ở trên phần tử DOM
+        console.log(aElement.removeAttribute('author'));
+    </script>
+
+</body>
+
+</html>

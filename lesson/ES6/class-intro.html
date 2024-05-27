@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Js</title>
+</head>
+
+<body>
+    <h1>Class Js</h1>
+    <div id="root"></div>
+    <script>
+        //Hướng đối tượng js
+        // class ClassName {
+        //     constructor(param1, param2, ...) {
+        //         // Constructor: được gọi khi một đối tượng của lớp được tạo ra
+        //         // Thường được sử dụng để khởi tạo các thuộc tính của đối tượng
+        //         this.param1 = param1;
+        //         this.param2 = param2;
+        //         //...
+        //     }
+
+        //     method1() {
+        //         // Phương thức 1
+        //     }
+
+        //     method2() {
+        //         // Phương thức 2
+        //     }
+
+        //     //...
+        // }
+
+        class User {
+            //thuộc tính
+            constructor(fullname) {
+                this.fullname = fullname;
+            }
+            //phương thức
+            show() {
+                return `Xin chào: ${this.fullname}`
+            }
+            render() {
+                document.getElementById('root').innerHTML = this.show()
+            }
+        }
+        let my_user = new User('Hoang Minh Phung')
+        my_user.render()
+    </script>
+</body>
+
+</html>

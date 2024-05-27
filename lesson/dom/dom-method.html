@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Js Html dom document</title>
+</head>
+
+<body>
+    //Document là đối tượng bao hàm, sở hữu tất cả các đối tượng khác trên toàn bộ trang web
+    //Phần tử: element là các phần tử bên trong document: vd: p , h1 , span, body , title
+    //Thuộc tính: attribute là các thuộc tính bên trong phần tử: vd: a-href , ...
+
+    <!-- getElementBy Id -->
+
+    <p id="pro"> Hoang Minh Phung</p>
+    <script>
+        const channge = document.getElementById('pro');
+        channge.style.color = 'red';
+        channge.style.background = 'yellow'
+    </script>
+
+    <!-- getElementBy tagName -->
+    <h2 class="highlight">Tiêu đề 1</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.</p>
+    <h2>Tiêu đề 2</h2>
+    <p class="highlight">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.</p>
+    <script>
+        const h2_element = document.getElementsByTagName('h2');
+        const p_element = document.getElementsByTagName('p');
+        // console.log(h2_element);
+        // h2_element[0].style.color = 'blue';
+        for (let i = 0; i < h2_element.length; i++) {
+            h2_element[i].style.color = 'red';
+        }
+        for (let value of p_element) {
+            value.style.color = 'green'
+        }
+    </script>
+
+    <!-- getElementBy className -->
+    <script>
+        const highlights = document.getElementsByClassName('highlight');
+        for (let values of highlights) {
+            values.style.background = 'gray';
+        }
+    </script>
+
+</body>
+
+</html>

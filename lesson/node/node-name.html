@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node name</title>
+</head>
+
+<body>
+    <h1>Node name</h1>
+    <a href="">Website lập trình</a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a purus sapien. Donec a quam eget lorem
+        bibendum dapibus sed id turpis. Phasellus vel nunc sit amet purus ornare pellentesque sed sed velit. Curabitur
+        vulputate purus sed dolor posuere dictum eu vel mi. Ut in luctus orci. Class aptent taciti sociosqu ad litora
+        torquent per conubia nostra, per inceptos himenaeos. Integer facilisis lectus non diam tempor sagittis.
+        Curabitur iaculis lacus quis erat lobortis, quis iaculis arcu consectetur. Donec efficitur nibh eu tellus
+        tincidunt, a vestibulum neque sodales. Etiam id interdum augue. Phasellus a malesuada nisi. Donec rutrum risus
+        pretium, elementum leo eu, fringilla nisi. Ut sit amet semper lectus.</p>
+    <ul id="main-menu">
+        <li><a href="">Item 1</a>
+            <ul class="sub-menu">
+                <li><a href="">Item 1.1</a></li>
+                <li class="current"><a href="">Item 1.2</a></li>
+                <li><a href="">Item 1.3</a></li>
+                <li><a href="">Item 1.4</a></li>
+            </ul>
+        </li>
+        <li><a href="">Item 2</a></li>
+        <li><a href="">Item 3</a></li>
+        <li><a href="">Item 3</a></li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a purus sapien. Donec a quam eget lorem
+        bibendum dapibus sed id turpis. Phasellus vel nunc sit amet purus ornare pellentesque sed sed velit. Curabitur
+        vulputate purus sed dolor posuere dictum eu vel mi. Ut in luctus orci. Class aptent taciti sociosqu ad litora
+        torquent per conubia nostra, per inceptos himenaeos. Integer facilisis lectus non diam tempor sagittis.
+        Curabitur iaculis lacus quis erat lobortis, quis iaculis arcu consectetur. Donec efficitur nibh eu tellus
+        tincidunt, a vestibulum neque sodales. Etiam id interdum augue. Phasellus a malesuada nisi. Donec rutrum risus
+        pretium, elementum leo eu, fringilla nisi. Ut sit amet semper lectus</p>
+    <script>
+        // const h1Node = document.querySelector('h1')
+        // console.log(h1Node.nodeName);
+        // const ulNode = document.querySelector('ul')
+        // console.log(ulNode.nodeName);
+
+        //Truy cập vào phần tử cha 
+        const aElment = document.querySelector('.sub-menu li a')
+        // console.log(aElment.parentElement);
+        // console.log(aElment.parentElement.parentElement);
+        //Truy cập vào phần tử cha highlevel
+        aElment.closest('#main-menu').style.background = 'red';
+        //Truy cập vào phần tử con
+        const main_menu = document.getElementById('main-menu')
+        main_menu.firstElementChild.style.background = 'gray'
+        main_menu.lastElementChild.style.background = 'green'
+        //Truy cập vào phần tử trước và sau Prev và Next
+        const current = document.querySelector('.current')
+        console.log(current);
+        current.previousElementSibling.innerHTML = 'gomuno'
+        current.nextElementSibling.innerHTML = 'gomuno'
+    </script>
+</body>
+
+</html>

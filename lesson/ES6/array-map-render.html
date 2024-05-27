@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array map render</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-item {
+            width: calc(25% - 10px);
+            /* Đặt kích thước của mỗi sản phẩm và tạo khoảng cách giữa chúng */
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .product-thumb img {
+            width: 100%;
+            /* Đảm bảo hình ảnh điền đầy phần nội dung */
+            height: auto;
+            display: block;
+        }
+
+        .title {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 0 10px;
+            /* Thêm padding để tạo khoảng cách với các biên */
+        }
+
+        .price {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            padding: 0 10px;
+            /* Thêm padding để tạo khoảng cách với các biên */
+        }
+
+        @media screen and (max-width: 600px) {
+            .product-item {
+                width: 100%;
+                /* Đặt kích thước của sản phẩm thành 100% trên các thiết bị có kích thước màn hình nhỏ */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+    </div>
+    <script>
+        const products = document.querySelector('.container')
+        let productItem = [
+            {
+                id: 1,
+                url: "#",
+                img: "https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/307174/samsung-galaxy-s24-ultra-grey-thumb-600x600.jpg",
+                name: "Samsung Galaxy S24 Ultra 5G 256GB",
+                price: "26.990.000"
+            },
+            {
+                id: 2,
+                url: "#",
+                img: "https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/307174/samsung-galaxy-s24-ultra-grey-thumb-600x600.jpg",
+                name: "Samsung Galaxy S24 Ultra 5G 256GB 123",
+                price: "30.990.000"
+            },
+            {
+                id: 3,
+                url: "#",
+                img: "https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/307174/samsung-galaxy-s24-ultra-grey-thumb-600x600.jpg",
+                name: "Samsung Galaxy ",
+                price: "990.000"
+            },
+        ]
+        let productHtml = productItem.map((e) => {
+            return `
+            <div class="product-item">
+            <a href=${e.url} class="product-thumb">
+                <img src="${e.img}"
+                    alt="Samsung Galaxy S24 Ultra 5G 256GB">
+            </a>
+            <p class="title">${e.name}</p>
+            <span class="price">${e.price}₫</span>
+        </div>
+            `
+        })
+        products.innerHTML = productHtml;
+    </script>
+</body>
+
+</html>

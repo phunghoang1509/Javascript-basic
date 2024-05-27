@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>How to add event to element?</h1>
+    <!-- Cách 1: Inline element -->
+
+    <!-- <button id="btn" onclick="alert('super gomuno')">Click me</button> -->
+    <button id="btn" onclick="show()">Click me</button>
+    <script>
+        function show() {
+            alert("super gomu")
+        }
+        // Cách 2: JS
+        const btnElement = document.getElementById('btn');
+        btnElement.onclick = function () {
+            alert('CLick 1')
+        }
+        //Cách 3: Js AddEventListener
+        btnElement.addEventListener('click', show)
+    </script>
+</body>
+
+</html>

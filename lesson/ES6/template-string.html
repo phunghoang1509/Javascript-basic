@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template String</title>
+</head>
+
+<body>
+    <h1>Template String</h1>
+    <div id="result"></div>
+    <script>
+        const resultE = document.getElementById('result')
+        //Xuất dữ liệu chuỗi
+        let a = 10, b = 20, total;
+        //tổng a và b là
+        //Cách thông thường
+        // total = "tổng" + a + "và" + b + "là" + (a + b);
+        // resultE.innerHTML = total
+        //template string
+        total = `tổng ${a} và ${b} là ${a + b}`
+        resultE.innerText = total
+    </script>
+</body>
+
+</html>

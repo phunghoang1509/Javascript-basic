@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let my_object = {
+            name: "Hoàng Minh Phụng",
+            age: 22,
+            gender: "Male",
+            height: " 1m8",
+            get fullName() {
+                return this.name + '' + this.height;
+            },
+            set fullName(info) {
+                info = info.split(' ');
+                this.name = info[0];
+                this.height = info[info.length - 1];
+            }
+        }
+        // console.log(my_object.fullName);
+        // console.log(my_object.name);
+        // console.log(my_object['name']);
+        for (let x in my_object) {
+            // console.log(x + ':' + my_object[x]);
+        }
+        my_object.skill = "vip pro cute";
+        delete (my_object.skill)
+        // console.log(my_object);
+
+        const caculator = {
+            tong: function (a, b) {
+                return a + b;
+            },
+            hieu: function (a, b) {
+                return a - b;
+            },
+            tich: function (a, b) {
+                return a * b;
+            },
+            thuong: function (a, b) {
+                return a / b;
+            }
+
+        }
+        // console.log(caculator.tong(2, 8));
+        // console.log(caculator.hieu(2, 8));
+        // console.log(caculator.tich(2, 8));
+        // console.log(caculator.thuong(2, 8));
+        // Constructor function
+        // function Person(name, age) {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+
+        // // Thêm phương thức vào prototype
+        // Person.prototype.greet = function () {
+        //     console.log("Hello, my name is " + this.name + "" + this.age);
+        // };
+
+        // // Tạo một đối tượng mới từ Constructor function
+        // let person1 = new Person("Alice", 30);
+        // let person2 = new Person("Bob", 25);
+
+        // person1.greet(); // Output: Hello, my name is Alice
+        // person2.greet(); //
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static in js</title>
+</head>
+
+<body>
+    <h1>Static in js</h1>
+    <div id="root"></div>
+    <script>
+        class Gomu {
+            constructor(no) {
+                this.no = no;
+            }
+            static show(name) {
+                return `Xin chao!: ${name.no}`
+            }
+        }
+        let myInfo = new Gomu('super')
+        document.querySelector('div').innerHTML = Gomu.show(myInfo)
+    </script>
+</body>
+
+</html>

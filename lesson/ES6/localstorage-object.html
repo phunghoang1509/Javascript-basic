@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage Object</title>
+</head>
+
+<body>
+    <h1>Local Storage Object</h1>
+    <script>
+        let LIST_USERS = "LIST_USERS"
+        const users = [
+            {
+                name: "Phung",
+                age: 23,
+                heigh: 170
+            },
+            {
+                name: "Long",
+                age: 33,
+                heigh: 100
+            },
+        ]
+        localStorage.setItem(LIST_USERS, JSON.stringify(users))
+        let data = JSON.parse(localStorage.getItem('LIST_USERS'))
+        console.log(data);
+        //OBJECT  => chuyển OBJECT thành chuỗi => chuyển vào localStorage => Lấy ra chuyển về ban đầu parse => OBJECT
+        // OBJECT => JSON.stringify            => localStorage            => JSON.parse                     => OBJECT
+    </script>
+</body>
+
+</html>

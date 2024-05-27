@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator for array</title>
+</head>
+
+<body>
+    <h1>Spread operator for array</h1>
+    <script>
+        let current_arr = [1, 2, 3, 4, 55, 76]
+        //thêm phần tử vào mảng mới
+        let new_arr = [15, 0, 78, ...current_arr, 11, 2]
+        //tạo ra bản sao mảng 
+        let copy_arr = [...current_arr]
+        //nối mảng
+        let connnect_arr = [...current_arr, ...new_arr]
+        console.log(connnect_arr);
+    </script>
+</body>
+
+</html>

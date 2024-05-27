@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Change</title>
+</head>
+
+<body>
+    <h1>Evnet form</h1>
+    <form action="">
+        <fieldset>
+            <legend>Register Form</legend>
+            <label for="username">userName</label>
+            <br>
+            <input type="text" id="username" autocomplete="off">
+            <label for="password">Password</label>
+            <br>
+            <input type="password" id="password" autocomplete="off">
+            <label for="city">City</label>
+            <br>
+            <select name="" id="city">
+                <option value="">Chọn</option>
+                <option value="1">Hà Nội</option>
+                <option value="2">Đà Nẵng </option>
+                <option value="3">Hồ Chí Minh</option>
+            </select>
+        </fieldset>
+    </form>
+    <script>
+        const username = document.getElementById('city')
+        username.addEventListener('change', () => {
+            console.log(username.value);
+        })
+        username.addEventListener('change', () => {
+            console.log(city.value);
+        })
+    </script>
+</body>
+
+</html>

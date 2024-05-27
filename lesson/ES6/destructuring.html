@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Js</title>
+</head>
+
+<body>
+    <h1>Destructuring Js</h1>
+    <script>
+        //1.Nhận giá trị từ array, object
+        let my_arr = [2, 4, 5, 66]
+        // let a = [my_arr[0]]
+        // let b = [my_arr[1]]
+        // let c = [my_arr[3]]
+
+        //destructuring
+        // let [a, b, c] = my_arr
+        // console.log(c);
+
+        let my_obj = {
+            name: "Phung",
+            age: 22,
+            gender: "male"
+        }
+        // let fullname = my_obj.name
+        //destructuring
+        let { name, age, gender } = my_obj
+        console.log(name);
+        //2.Default value
+        let my_arr1 = [0, 1, 2]
+        let [x, y, z, t = 10] = my_arr1
+        console.log(t);
+        //3. ...rest
+        // let my_arr2 = [0, 1, 2, 44, 5, 22]
+        // let [a, b, ...resNumber] = my_arr2
+        // console.log(resNumber);
+        //4.Bỏ qua phần tử
+        // let my_arr3 = [0, 1, 2, 44, 5, 22]
+        // let [n, , m] = my_arr3
+        // console.log(m);
+        //5.Hoán đổi giá trị
+        let n = 3, m = 10;
+        [n, m] = [m, n]
+        console.log(n);
+        //6.Nhận giá trị từ function
+        let my_fuc = (a, b) => {
+            return [a, b]
+        }
+        let [a, b] = my_fuc(22, 89)
+        console.log(a);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Extend Js</title>
+</head>
+
+<body>
+    <h1>Class Extend Js</h1>
+    <div id="root"></div>
+    <script>
+        //Kế thừa trong class
+        // Lớp cha
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+
+            speak() {
+                console.log(`${this.name} makes a noise.`);
+            }
+        }
+
+        // Lớp con mở rộng từ lớp cha
+        class Dog extends Animal {
+            constructor(name, breed) {
+                super(name); // Gọi constructor của lớp cha với từ khóa super()
+                this.breed = breed;
+            }
+
+            speak() {
+                console.log(`${this.name} barks.`);
+            }
+
+            describe() {
+                console.log(`${this.name} is a ${this.breed}.`);
+            }
+        }
+
+        // Tạo một đối tượng từ lớp con
+        let myDog = new Dog('Buddy', 'Golden Retriever');
+        myDog.describe(); // Kết quả: Buddy is a Golden Retriever.
+        myDog.speak();    // Kết quả: Buddy barks.
+
+    </script>
+</body>
+
+</html>

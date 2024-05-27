@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom practice</title>
+</head>
+
+<body>
+    <h1>Thay đổi ảnh khi hover Js</h1>
+    <div class="products">
+        <img src="./image/libazz-fashion-bag-1.jpeg" data-src-v1="./image/libazz-fashion-bag-1.jpeg"
+            data-src-v2="./image/libazz-fashion-jacket-1.jpeg" alt="" width="300px">
+    </div>
+
+    <div class="products">
+        <img src="./image/libazz-fashion-bag-2.jpeg" data-src-v1="./image/libazz-fashion-bag-2.jpeg"
+            data-src-v2="./image/libazz-fashion-jacket-2.jpeg" alt="" width="300px">
+    </div>
+
+
+    <script>
+        const imgchange = document.querySelectorAll('.products');
+        for (let product of imgchange) {
+            const img = product.querySelector('img');
+            const img1 = img.getAttribute('src');
+            const img2 = img.getAttribute('data-src-v2');
+            product.addEventListener('mouseover', () => {
+                img.setAttribute('src', img2);
+            });
+            product.addEventListener('mouseout', () => {
+                img.setAttribute('src', img1);
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
